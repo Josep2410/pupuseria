@@ -1,0 +1,25 @@
+:root{
+  --primary: rgb(8, 77, 174);
+  --secondary: rgb(245, 245, 245);;
+  --font : #e3c35a;
+  
+}
+
+html{
+  box-sizing: border-box;
+}
+
+body{
+  padding-top:70px;
+  padding-bottom: 100px;
+  background-color: var(--secondary);
+}
+a{
+  text-decoration: none;
+}
+
+@media screen and (min-width: 420px){
+ header, nav,section{
+  display: none;
+ }
+}
