@@ -1,7 +1,7 @@
 import React from 'react'
 import '../stylesheets/navbar.css'
 import { Outlet, Link } from 'react-router-dom'
-import {data }from '../data'
+import {data } from '../data'
 export default function Navbar(){
  
   const navJSX = data.map(option => {

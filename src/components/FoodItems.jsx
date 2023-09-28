@@ -5,7 +5,10 @@ import { Outlet, Link } from 'react-router-dom'
 export default function FoodItems(props){
   const [index, setIndex] = useState(0)
 
-  let foodItems = props.arr.map(item => <div className="food_item"><img src={item.img} alt="" /></div>)
+  let foodItems = props.arr.map(item =>{ 
+    return(
+        <div key={item.id} className="food_item"><Link to={`/${determineLink(props.title)}/${item.id}`}><img id="food_img" src={item.img} alt="" /></Link></div>
+      )})
   let displayedItems = foodItems.slice(index, index + 4)
 
 
@@ -36,7 +39,7 @@ export default function FoodItems(props){
             <h3>{props.title}</h3>
           </div>
           <div className="col-3 d-flex align-items-start justify-content-end">
-          <Link to={`/${determineLink(props.title)}`}className="text-decoration-none">M&aacute;s</Link>
+          <Link id="mas" to={`/${determineLink(props.title)}`}className="text-decoration-none">M&aacute;s</Link>
           </div>
         </div>
         
