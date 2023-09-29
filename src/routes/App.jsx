@@ -1,6 +1,4 @@
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
-
+import Layout from '../components/Layout';
 import '../stylesheets/App.css'
 import Home from '../components/Home.jsx'
 import ErrorPage from '../error-page.jsx';
@@ -12,15 +10,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container-sm">
-        <Header/>
           <Routes>
-            <Route index element={<Home/>} />
-            <Route path='*' element={<ErrorPage/>}/>
-            <Route path='/:itemType' element={<ItemType/>}/>
-            <Route path='/:itemType/:itemDetails' element={<ItemDetails/>}/>
-
+            <Route element={<Layout/>}>
+              <Route index element={<Home/>} />
+              <Route path='*' element={<ErrorPage/>}/>
+              <Route path='/:itemType' element={<ItemType/>}/>
+              <Route path='/:itemType/:itemDetails' element={<ItemDetails/>}/>
+            </Route >
           </Routes>
-        <Navbar/>
       </div>
     </BrowserRouter>
     
