@@ -1,0 +1,58 @@
+.greeter{
+  text-align: center;
+}
+.meal-container{
+  display : grid;
+  grid-template-columns: 40vw 40vw;
+  column-gap: 20px;
+ row-gap: 20px;
+}
+
+.grid-child{
+  box-shadow: -2px 2px 8px grey;
+  width: 100%;
+  height: 35vh;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary);
+}
+.grid-child img{
+  width: 100%;
+  height: 60%;
+}
+.info-container{
+  height: 37%;
+  width: 100%;
+  border: 5px double var(--primary);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+}
+.info-container h3, .info-container p{
+  margin : 0;
+  padding : 0;
+}
+
+.info-container h3{
+  font-size: .90rem;
+}
+
+.price-and-btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-and-btn p{
+  font-size : .80rem
+}
+
+.price-and-btn button{
+  height: 80%;
+  font-size : .80rem;
+}

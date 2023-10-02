@@ -11,11 +11,11 @@ function App() {
     <BrowserRouter>
       <div className="container-sm">
           <Routes>
-            <Route element={<Layout/>}>
+            <Route path="/" element={<Layout/>}>
               <Route index element={<Home/>} />
               <Route path='*' element={<ErrorPage/>}/>
-              <Route path='/:itemType' element={<ItemType/>}/>
-              <Route path='/:itemType/:itemDetails' element={<ItemDetails/>}/>
+              <Route path=':itemType' element={<ItemType/>}/>
+              <Route path=':itemType/:itemDetails' element={<ItemDetails/>}/>
             </Route >
           </Routes>
       </div>
