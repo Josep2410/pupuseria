@@ -15,7 +15,7 @@ function App() {
               <Route index element={<Home/>} />
               <Route path='*' element={<ErrorPage/>}/>
               <Route path=':itemType' element={<ItemType/>}/>
-              <Route path=':itemType/:itemDetails' element={<ItemDetails/>}/>
+              <Route path=':itemType/:itemDetails' element={<ItemDetails/>} />
             </Route >
           </Routes>
       </div>
