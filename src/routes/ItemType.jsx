@@ -1,26 +1,23 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams , Link} from 'react-router-dom'
 import {menu} from '../menu'
 import '../stylesheets/ItemType.css'
 
 export default function ItemType(props){
   const params = useParams()
- 
   const category = getCategory(params.itemType)
-  console.log(params.itemType)
   const items = menu.filter(dish => dish.category === category)
   const displayItems = items.map(item=> {
     return(
-      <div className="grid-child">
-        <img src={item.img} />
-        <div className='info-container'>
-          <h3>{item.item}</h3>
-          <div className='price-and-btn'>
-            <p>${item.price}</p>
-            <button>Add </button>
+      <Link to={`${item.id}`} key={item.id}>
+        <div className="grid-child ">
+          <img src={item.img} />
+          <div className='info-container container-sm'>
+            <p>{item.item}</p>
+            <span>${item.price}</span>
           </div>
-        </div>
-      </div>
+         </div>
+      </Link>
     )
   })
 

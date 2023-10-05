@@ -14,7 +14,7 @@ export default function Home(props){
     const drinks = menu.filter(item => item.category === 'Bebidas')
     const desserts = menu.filter(item=> item.category === 'Pastel')
 
-    const sections = categories.map(title=> <FoodItems title={title} arr={getArray(title)}/>) 
+    const sections = categories.map(title=> <FoodItems title={title} arr={getArray(title)} key={title}/>) 
     
     function getArray(title){
       if(title === 'Desayuno') return breakfastItems

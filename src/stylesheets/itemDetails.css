@@ -1,0 +1,15 @@
+#backArrow{
+  height: 25px;
+  margin-bottom : 10px;
+}
+
+
+#item-img{
+  height: 30vh;
+  object-fit:cover;
+
+}
+
+.row #descr{
+  font-size: .8rem;
+}

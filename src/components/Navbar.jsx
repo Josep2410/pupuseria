@@ -7,8 +7,8 @@ export default function Navbar(){
  
   const navJSX = data.map(option => {
     return (
-      <Link to={option.link}>
-        <div className="nav-item">
+      <Link to={option.link} key={option.text}>
+        <div className="nav-item" >
           <img src={`/svgs/${option.imgSrc}`}></img>
           <span>{option.text}</span>
         </div>

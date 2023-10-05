@@ -20,27 +20,40 @@
 }
 .grid-child img{
   width: 100%;
-  height: 60%;
+  height: 68%;
   object-fit: cover;
 }
 .info-container{
-  height: 37%;
+  height: 30%;
   width: 100%;
   border: 5px double var(--primary);
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 2px;
 }
-.info-container h3, .info-container p{
+.info-container p{
+  font-size: .8rem;
+  color:black;
+  font-weight: 600;
+  margin:0;
+  line-height: 1rem;
+}
+
+.info-container span{
+  color:black;
+  font-size: .70rem;
+}
+
+
+
+
+/* .info-container h3, .info-container p{
   margin : 0;
   padding : 0;
 }
 
-.info-container h3{
-  font-size: .80rem;
-}
 
 .price-and-btn{
   display: flex;
@@ -58,8 +71,8 @@
   
   border-radius: 5px;
   overflow: hidden;
-
 }
+*/
 
 
 .price-and-btn button:hover{

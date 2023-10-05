@@ -44,7 +44,7 @@ export const menu = [
   {
     id : 7,
     category : 'Entree',
-    item : 'Pupusas',
+    item : 'Pupusas (2)',
     price : 5.99,
     subOptions : ['queso', 'chicharoon', 'ayote', 'frijoles', 'chilipin', 'jalapeno', 'camaron', 'pollo'],
     img : 'https://www.cookingforkeeps.com/wp-content/uploads/2020/04/Cheesy-Salvadoran-Pupusas-with-Chorizo-2-1-1.jpg.webp'
@@ -59,14 +59,14 @@ export const menu = [
   {
     id : 9,
     category : 'Desayuno',
-    item : 'Torrejas',
+    item : 'Torrejas (2)',
     price : 3.99,
     img : 'https://travelfoodatlas.com/wp-content/uploads/2022/10/Torrejas-735x490.jpg.webp'
   },
   {
     id : 10,
     category : 'Entree',
-    item : 'Tamal Pisque',
+    item : 'Tamal Pisque (3)',
     price : 5.99,
     img : 'https://www.196flavors.com/wp-content/uploads/2019/01/tamales-pisques-1.jpg'
   },
@@ -87,7 +87,7 @@ export const menu = [
   {
     id : 13,
     category : 'Entree',
-    item : 'Enchiladas',
+    item : 'Enchiladas (3)',
     price : 6.99,
     subOptions : ['Enfrijoladas', 'Enchiladas potosinas', 'Enchiladas suizas', 'Enchiladas San Miguel', 'Enchiladas con mole '] ,
     img : 'https://weelicious.com/wp-content/uploads/2021/05/Mexican-Enchiladas-10-1.jpg'
@@ -95,7 +95,7 @@ export const menu = [
   {
     id : 14,
     category : 'Entree',
-    item : 'Tacos mexicanos',
+    item : 'Tacos mexicanos (3)',
     subOptions : ['Al Pastor', 'Barbacoa' , 'Birria' , 'Carne Asada', 'Carnitas', 'Chorizo', 'Pollo', 'Pescado'] ,
     price : '4.99',
     img : 'https://bpprivilegeclub.com/blog/wp-content/uploads/2021/07/bigstock-three-carne-asada-mexican-stre-385360028-scaled.jpg'
@@ -104,21 +104,21 @@ export const menu = [
     id : 15,
     category : 'Bebidas',
     item : 'Fresco Horchata',
-    price : 1.99,
+    price : '1.99',
     img: 'https://travelfoodatlas.com/wp-content/uploads/2022/10/Fresh-Horchata-768x512.jpg.webp'
   },
   {
     id : 16, 
     category: 'Bebidas',
     item : 'Fresco Limonada',
-    price : 1.99,
+    price : '1.99',
     img : 'https://www.blossmangas.com/wp-content/uploads/2020/05/Lemonade-1-1.jpg'
   },
   {
     id : 17,
     category : 'Bebidas',
     item : 'Agua Fresca',
-    price : 1.50,
+    price : '1.50',
     subOptions: ['sandia' , 'pepino' , 'pina', 'mango' , 'melon', 'tamarindo' ,'jamaica'],
     img : 'https://www.cookingclassy.com/wp-content/uploads/2021/06/aqua-fresca-5-600x400.jpg'
   },
@@ -126,56 +126,56 @@ export const menu = [
     id : 18,
     category : 'Bebidas',
     item: 'agua',
-    price : 1.00,
+    price : '1.00',
     img : 'https://www.riverkeeper.org/wp-content/uploads/2018/04/bottled-water-credit-CC-Myrtle-Beach-TheDigitel-viaFlickr-modified-1000-650x333.jpg'
   },
   {
     id : 19, 
     category : 'Bebidas',
     item : 'coffee',
-    price : 2.50,
+    price : '2.50',
     img : 'https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=x_3,y_1231,h_1684,w_2993,c_crop/h_540,w_960/f_webp'
   },
   {
     id : 20,
     category: 'Bebidas',
     item : 'ice tea',
-    price : 1.99,
+    price : '1.99',
     img : 'https://sugarspunrun.com/wp-content/uploads/2022/05/Easy-sweet-tea-recipe-4-of-6.jpg'
   },
   {
     id: 21,
     category : 'Pastel',
     item : 'Quesadilla',
-    price : 2.99,
+    price : '2.99',
     img : 'https://blog.amigofoods.com/wp-content/uploads/2020/09/salvadoran-quesdailla.jpg'
   },
   {
     id: 22,
     category : 'Pastel',
     item : 'Tres Leches',
-    price : 3.99,
+    price : '3.99',
     img : 'https://blog.amigofoods.com/wp-content/uploads/2019/07/Tres-leche-cake.jpg'
   },
   {
     id: 23, 
     category : 'Pastel',
     item : 'Pastelitos de Pina',
-    price : 2.99,
+    price : '2.99',
     img : 'https://blog.amigofoods.com/wp-content/uploads/2023/03/pastelitos-de-pina.jpg'
   },
   {
     id : 24,
     category : 'Pastel',
     item : 'Torta Maria Luisa',
-    price: 2.99,
+    price: '2.99',
     img : 'https://blog.amigofoods.com/wp-content/uploads/2023/03/torta-maria-luisa.jpg'
   },
   {
     id: 25,
     category : 'Pastel',
     item : 'Semita',
-    price: 1.99,
+    price: '1.99',
     img: 'https://cdn0.recetasgratis.net/es/posts/9/1/8/pan_de_semitas_75819_600.webp'
   }
 

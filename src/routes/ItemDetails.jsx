@@ -1,26 +1,30 @@
 import React from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams, Link} from 'react-router-dom'
 import {menu} from '../menu'
+import '../stylesheets/itemDetails.css'
 
 export default function ItemType(props){
   const {itemID} = useParams()
 
   const myItem = menu.filter(item => item.id == itemID)[0]
-  console.log(myItem)
   
   return(
     <div className='container-sm'>
-      <div className='row'><img src={myItem.img} alt="" /></div>
+      <Link to=".." relative='path'><img id="backArrow"src="/svgs/backArrow.svg" alt="" /></Link>
+      <div className='row' id='img-container'><img id="item-img" src={myItem.img} alt="" /></div>
       <div className='row'>
-        <h4>{myItem.item}</h4>
+        <h3>{myItem.item}</h3>
       </div>
       <div className='row'>
-        <p>${myItem.price}</p>
+        <h6>${myItem.price}</h6>
       </div>
-      <div className='row'>
+     <div  className='row'>
+       <p id='descr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente quae atque tempora nam aliquid deserunt ea, non debitis? Voluptatibus dolorum tenetur dolore? Dolorum, error?</p>
+     </div>
+     
+   <div className='row'>
       <button className='btn btn-primary'>Add to Cart</button>
       </div>
-     
     
     </div>
  )
