@@ -8,7 +8,7 @@ export default function Home(props){
     //get all catergories from menu, then add only unique catergories =>breakfast , entree, bebidas, and pastel
     const categories = [...new Set(menu.map(item => item.category)) ]
 
-    //divide the menu data into arrays. BF items array, entree items array, etc
+    //filter the menu data into arrays. BF items array, entree items array, etc
     const breakfastItems = menu.filter(item => item.category === 'Desayuno')
     const entreeItems = menu.filter(item => item.category === 'Entree')
     const drinks = menu.filter(item => item.category === 'Bebidas')

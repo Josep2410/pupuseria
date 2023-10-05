@@ -5,10 +5,10 @@ import Navbar from './Navbar'
 
 export default function Layout(){
   return(
-    <>
+    <div className="container-sm">
       <Header/>
       <Outlet/>
       <Navbar/>
-    </>
+    </div>
   )
 }

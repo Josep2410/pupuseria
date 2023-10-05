@@ -17,7 +17,7 @@ export default function ItemType(props){
           <h3>{item.item}</h3>
           <div className='price-and-btn'>
             <p>${item.price}</p>
-            <button>Add Item</button>
+            <button>Add </button>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function ItemType(props){
   }
   return(
   <>
-    <h1 className="greeter">Welcome to my {params.itemType} Page!!</h1>
+    <h1 className="greeter">{params.itemType}</h1>
     <div className="meal-container">
       {displayItems}
     </div>
