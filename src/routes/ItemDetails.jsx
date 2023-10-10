@@ -2,10 +2,11 @@ import React from 'react'
 import { useParams, Link} from 'react-router-dom'
 import {menu} from '../menu'
 import '../stylesheets/itemDetails.css'
+import {CartContext} from '../components/AddToCart'
 
 export default function ItemType(props){
   const {itemID} = useParams()
-
+  const { addItem} = React.useContext(CartContext)
   const myItem = menu.filter(item => item.id == itemID)[0]
   
   return(
@@ -18,14 +19,13 @@ export default function ItemType(props){
       <div className='row'>
         <h6>${myItem.price}</h6>
       </div>
-     <div  className='row'>
-       <p id='descr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente quae atque tempora nam aliquid deserunt ea, non debitis? Voluptatibus dolorum tenetur dolore? Dolorum, error?</p>
-     </div>
-     
-   <div className='row'>
-      <button className='btn btn-primary'>Add to Cart</button>
+      <div  className='row'>
+        <p id='descr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente quae atque tempora nam aliquid deserunt ea, non debitis? Voluptatibus dolorum tenetur dolore? Dolorum, error?</p>
       </div>
-    
+      
+        <div className='row'>
+          <button className='btn btn-primary' onClick={addItem}>Add to Cart</button>
+        </div>
     </div>
  )
 }

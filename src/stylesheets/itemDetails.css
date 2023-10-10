@@ -13,3 +13,13 @@
 .row #descr{
   font-size: .8rem;
 }
+
+#adjustItems{
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+}
+
+#adjustItems:hover{
+  cursor: pointer;
+}

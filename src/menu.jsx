@@ -75,7 +75,7 @@ export const menu = [
     category : 'Entree',
     item : 'Gallina India',
     price : 6.99,
-    img : 'https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/315032751_1747324845643791_715257563580184209_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5614bc&_nc_ohc=Qwps6pajBV4AX-Hclms&_nc_ht=scontent-hou1-1.xx&oh=00_AfA90qbp3DEo4ELNL3RDnhRhrj6er_GZrrII947EQo7CQw&oe=6516B4BD'
+    img : 'https://live.staticflickr.com/7093/7358518340_4f02c26a20_h.jpg'
   },
   {
     id : 12 ,
