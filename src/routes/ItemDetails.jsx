@@ -8,6 +8,17 @@ export default function ItemType(props){
   const {itemID} = useParams()
   const { addItem} = React.useContext(CartContext)
   const myItem = menu.filter(item => item.id == itemID)[0]
+
+function addedItem(){
+  addItem()
+}
+
+  React.useEffect(()=>{
+    fetch('/api/menu')
+      .then(res=> res.json())
+      .then(data => console.log(data))
+      
+  },[])
   
   return(
     <div className='container-sm'>
@@ -24,7 +35,7 @@ export default function ItemType(props){
       </div>
       
         <div className='row'>
-          <button className='btn btn-primary' onClick={addItem}>Add to Cart</button>
+          <button className='btn btn-primary' onClick={addedItem}>Add to Cart</button>
         </div>
     </div>
  )
