@@ -216,6 +216,7 @@ createServer({
   routes(){
     this.namespace = 'api'
     this.logging = false
+    this.timing = 500
 
     this.get('/menu', (schema, request)=>{
       return schema.menus.all()
