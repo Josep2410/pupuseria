@@ -4,9 +4,13 @@ import {menu} from '../menu'
 import '../stylesheets/ItemType.css'
 
 export default function ItemType(props){
+
   const params = useParams()
-  const category = getCategory(params.itemType)
-  const items = menu.filter(dish => dish.category === category)
+  const category = params.itemType
+
+  
+  const items = menu.filter(dish => dish.category == category)
+
   const displayItems = items.map(item=> {
     return(
       <Link to={`${item.id}`} key={item.id}>
@@ -21,12 +25,7 @@ export default function ItemType(props){
     )
   })
 
-  function getCategory(category){
-    if(category === 'Breakfast') return 'Desayuno'
-    else if(category === 'Entree') return 'Entree'
-    else if(category === 'Drinks') return 'Bebidas'
-    else if(category === 'Dessert') return 'Pastel'
-  }
+
   return(
   <>
     <h1 className="greeter">{params.itemType}</h1>
