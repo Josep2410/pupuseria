@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 export default function Navbar(){
   const data = [
     { link: '/' , imgSrc : 'home.svg' , text: 'Home'},
-    { link: '/Desayuno' , imgSrc : 'breakfast.svg' , text: 'Desayuno'},
-    { link: '/Entree' , imgSrc : 'steak.svg' , text: 'Entree'},
-    { link: '/Pastel' , imgSrc : 'dessert.svg' , text: 'Pastel'},
-    { link: '/Bebidas' , imgSrc : 'soda.svg' , text: 'Bebidas'}
+    { link: 'Desayuno' , imgSrc : 'breakfast.svg' , text: 'Desayuno'},
+    { link: 'Entree' , imgSrc : 'steak.svg' , text: 'Entree'},
+    { link: 'Pastel' , imgSrc : 'dessert.svg' , text: 'Pastel'},
+    { link: 'Bebidas' , imgSrc : 'soda.svg' , text: 'Bebidas'}
     
   ]
  

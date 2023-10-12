@@ -7,12 +7,13 @@ export default function ItemType(props){
   const params = useParams()
   const category = params.itemType
   const [filteredItems, setFilteredItems] = React.useState(null)
+ 
 
   React.useEffect(()=>{
     fetch('/api/menu')
       .then(res=> res.json())
       .then(data=>setFilteredItems(data.menus.filter(dish => dish.category == category)))
-  },[])
+  },[category])
   
   return(
   <>
