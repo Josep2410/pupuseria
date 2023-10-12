@@ -18,12 +18,10 @@ export default function Home(props){
   if(menu){
     uniqueItems = ([...new Set(menu.map(item => item.category)) ]) //an array of unique strings
   }
-    
-    function determineArray(title){
-      if(title === 'Desayuno')  return menu.filter(item => item.category === 'Desayuno')
-      else if(title === 'Entree') return menu.filter(item => item.category === 'Entree')
-      else if(title ==='Bebidas') return menu.filter(item => item.category === 'Bebidas')
-      else if(title === 'Pastel')  return menu.filter(item=> item.category === 'Pastel')
+
+  // Return an array of either breakfast, lunch, drinks or desserts
+    function getArray(str){
+      return menu.filter(item => item.category === str)
     }
 
   return( //conditionally render JSX
@@ -31,7 +29,7 @@ export default function Home(props){
       menu ?
      ( <div>
        <TheSpecial/>
-      {uniqueItems.map(str=> <FoodItems title={str} arr={determineArray(str)} key={str}/>) }
+      {uniqueItems.map(str=> <FoodItems title={str} arr={getArray(str)} key={str}/>) }
       </div>) : <h1>Loading...</h1>
     }
     </>
