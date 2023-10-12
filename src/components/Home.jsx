@@ -1,32 +1,39 @@
 import React from 'react'
 import FoodItems from '../components/FoodItems'
 import TheSpecial from '../components/TheSpecial'
-import {menu} from '../menu'
 
 export default function Home(props){
 
-    //get all catergories from menu, then add only unique catergories =>breakfast , entree, bebidas, and pastel
-    const categories = [...new Set(menu.map(item => item.category)) ]
+  const [menu, setMenu] = React.useState(null) //becomes array of object after useEffect
+  let uniqueItems = React.useRef(null)
 
-    //filter the menu data into arrays. BF items array, entree items array, etc
-    const breakfastItems = menu.filter(item => item.category === 'Desayuno')
-    const entreeItems = menu.filter(item => item.category === 'Entree')
-    const drinks = menu.filter(item => item.category === 'Bebidas')
-    const desserts = menu.filter(item=> item.category === 'Pastel')
-
-    const sections = categories.map(title=> <FoodItems title={title} arr={getArray(title)} key={title}/>) 
+  React.useEffect(()=>{
+    fetch('/api/menu')
+      .then(res=>res.json())
+      .then(data=>{
+        setMenu(data.menus) //returns full menu
+      })
+  },[])
+  
+  if(menu){
+    uniqueItems = ([...new Set(menu.map(item => item.category)) ]) //an array of unique strings
+  }
     
-    function getArray(title){
-      if(title === 'Desayuno') return breakfastItems
-      else if(title === 'Entree') return entreeItems
-      else if(title ==='Bebidas') return drinks
-      else if(title === 'Pastel') return desserts
+    function determineArray(title){
+      if(title === 'Desayuno')  return menu.filter(item => item.category === 'Desayuno')
+      else if(title === 'Entree') return menu.filter(item => item.category === 'Entree')
+      else if(title ==='Bebidas') return menu.filter(item => item.category === 'Bebidas')
+      else if(title === 'Pastel')  return menu.filter(item=> item.category === 'Pastel')
     }
 
-  return(
-    <>
-      <TheSpecial/>
-      {sections}
+  return( //conditionally render JSX
+    <>{
+      menu ?
+     ( <div>
+       <TheSpecial/>
+      {uniqueItems.map(str=> <FoodItems title={str} arr={determineArray(str)} key={str}/>) }
+      </div>) : <h1>Loading...</h1>
+    }
     </>
   
   )
