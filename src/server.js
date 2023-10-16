@@ -3,6 +3,7 @@ import {createServer, Model} from 'miragejs'
 createServer({
   models: {
     menu : Model,
+    discount : Model
   },
 
   seeds(server){
@@ -235,6 +236,42 @@ createServer({
       price: '1.99',
       img: 'https://cdn0.recetasgratis.net/es/posts/9/1/8/pan_de_semitas_75819_600.webp'
     })
+    server.create('discount', {
+      id: 0,
+     dayOfWeek : 'Domingo',
+     discount: "Todas las bebidas"
+    })
+    server.create('discount', {
+     id: 1,
+     dayOfWeek : "Lunes",
+     discount: "25% de descuento al pedir dos platos de entree",
+     img: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2470,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/allwayz_hungry_pupusas_houston_argvux.jpg"
+    })
+    server.create('discount', {
+      id: 2,
+     dayOfWeek : "Martes",
+     discount: "Todas las bebidas"
+    })
+    server.create('discount', {
+      id: 3,
+     dayOfWeek : "Miercoles",
+     discount: "Todas las bebidas"
+    })
+    server.create('discount', {
+      id:4,
+     dayOfWeek : "Jueves",
+     discount: "Todas las bebidas"
+    })
+    server.create('discount', {
+      id: 5,
+     dayOfWeek : "Viernes",
+     discount: "Todas las bebidas"
+    })
+    server.create('discount', {
+      id: 6,
+     dayOfWeek : "Sabado",
+     discount: "Todas las bebidas"
+    })
   
   },
 
@@ -250,6 +287,12 @@ createServer({
       const id = request.params.id
       return schema.menus.find(id)
     })
+    this.get('/discounts/:id', (schema , request) =>{
+      const id = request.params.id
+      return schema.discounts.find(id)
+    })
+
+
     this.post('/:id', (schema,request) =>{
       const id = request.params.id
       const item = schema.menus.find(id)
