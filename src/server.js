@@ -259,5 +259,16 @@ createServer({
       }) 
 	  return item
     })
+    this.post('/decrementCount/:id', (schema,request) =>{
+      const id = request.params.id
+      const item = schema.menus.find(id)
+      item.update({
+        numInCart:item.numInCart - 1,
+        inCart: item.numInCart -1 <=0? false : true
+      }) 
+	  return item
+    })
+
+
   }
 })
