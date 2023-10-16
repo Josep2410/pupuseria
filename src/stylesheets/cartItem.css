@@ -1,0 +1,54 @@
+.cartItem{
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: -2px 2px 8px grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#cartImage{
+  height: 90%;
+  width: 35%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#cartInfo{
+  height : 90%;
+  width: 50%;
+
+
+}
+
+
+.standard{
+  font-size: .8rem;
+}
+.small{
+  font-size: .70rem;
+}
+
+.btnLayout{
+  width: 25%;
+}
+
+.flexInfo{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.flexInfo span{
+  font-size: .80rem;
+}
+
+.btn-operation:hover{
+  cursor: pointer;
+}
+
+.divider{
+  border: 2px solid black;
+}
