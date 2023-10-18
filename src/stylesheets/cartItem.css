@@ -1,5 +1,5 @@
 .cartItem{
-  height: 15vh;
+  height: 18vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -19,10 +19,7 @@
 #cartInfo{
   height : 90%;
   width: 50%;
-
-
 }
-
 
 .standard{
   font-size: .8rem;
@@ -51,4 +48,9 @@
 
 .divider{
   border: 2px solid black;
+}
+
+.total span{
+  font-size: 1rem;
+  font-weight: 600;
 }
