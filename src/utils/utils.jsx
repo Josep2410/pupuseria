@@ -1,6 +1,6 @@
 const DISCOUNT_RATE = .10
 const TAX_RATE = 0.0825
-const DRINK_DISCOUNT_RATE = .50
+const DRINK_DISCOUNT_RATE = .25
 
 
 function getDiscount_Tax_Total(dayOfWeek, cartItems, subTotal){
