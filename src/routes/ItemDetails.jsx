@@ -40,7 +40,7 @@ export default function ItemType(props){
             <h3>{myItem.item}</h3>
           </div>
           <div className='row'>
-            <h6>${myItem.price}</h6>
+            <h6>${(myItem.price).toFixed(2)}</h6>
           </div>
           <div  className='row'>
             <p id='descr'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente quae atque tempora nam aliquid deserunt ea, non debitis? Voluptatibus dolorum tenetur dolore? Dolorum, error?</p>
