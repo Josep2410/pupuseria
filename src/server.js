@@ -256,17 +256,20 @@ createServer({
     server.create('discount', {
       id: 3,
      dayOfWeek : "Miercoles",
-     discount: "Un cafe y postre 10 por ciento de descuento" //!!!!!!!!!!
+     discount: "Un cafe y postre 10 por ciento de descuento" ,
+     img:"https://cdn.colombia.com/gastronomia/2012/04/13/pastel-de-cafe-3058.webp"
     })
     server.create('discount', {
       id:4,
      dayOfWeek : "Jueves",
-     discount: "Un Plato principal y una bebida con 10 por ciento de descuento "
+     discount: "Un Plato principal y una bebida con 10 por ciento de descuento ",
+     img : "http://taqueriavillanueva2.com/wp-content/uploads/2021/01/mexican-drinks-portland-780x400.jpg"
     })
     server.create('discount', {
       id: 5,
      dayOfWeek : "Viernes",
-     discount: "4 o Mas platos principales 10 por ciento de descuento" 
+     discount: "4 o Mas platos principales 10 por ciento de descuento" ,
+     img: "https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/comer/nuestros-favoritos/restaurantes-comida-latina-zaragoza/gr-cms-media-featured_images-none-67545808-51f5-495d-aea8-af52a4c7374a-collage-apertura.jpg"
     })
     server.create('discount', {
       id: 6,
