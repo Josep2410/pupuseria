@@ -5,7 +5,7 @@ import {getDiscount_Tax_Total, getSubtotal} from '../utils/utils'
 
 export default function MyCart(){
 
- const {numOfItems, addItem, removeItem} = React.useContext(CartContext)
+ const {numOfItems, addItem, removeItem, clearItems} = React.useContext(CartContext)
  const [cartItems, setCartItems] = React.useState(null)
  const d = new Date()
  const dayOfWeek = d.getDay()
@@ -21,7 +21,7 @@ export default function MyCart(){
 
  if(cartItems){
   subTotal = getSubtotal(cartItems)
- numsObj = {...getDiscount_Tax_Total(6,cartItems, subTotal)}
+ numsObj = {...getDiscount_Tax_Total(dayOfWeek,cartItems, subTotal)}
   displayItems = cartItems.map(item=> { //then map over each item to render JSX
     return(
       <div key={item.id} className='cartItem'>
@@ -71,6 +71,9 @@ function decrementItemCount(id){
     {numOfItems > 0? (
       <form action="">
         {displayItems}
+        <div className='row d-flex justify-content-end'>
+          <span className='clearCart standard col-4' onClick={clearItems}>clear cart</span>
+        </div>
         <br />
         <div className='flexInfo'><span >Subtotal : </span> <span>${(subTotal)}</span></div>
         <div className='flexInfo'><span >Discount : </span> <span>- ${numsObj.discount || "0.00" }</span></div>

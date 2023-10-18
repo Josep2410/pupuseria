@@ -32,6 +32,15 @@
   width: 25%;
 }
 
+.clearCart{
+  text-decoration: underline;
+}
+
+.clearCart:hover{
+ color: red;
+ cursor: pointer;
+}
+
 .flexInfo{
   display: flex;
   justify-content: space-between;

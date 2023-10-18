@@ -18,6 +18,15 @@ export default function AddToCart({children}){
 
   function clearItems(){
     SetNumOfItems(0)
+    fetch(`api/clearCart`, {
+      method: "POST",
+      body: JSON.stringify({}),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
   }
 
 
