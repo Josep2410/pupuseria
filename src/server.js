@@ -263,7 +263,7 @@ createServer({
       id:4,
      dayOfWeek : "Jueves",
      discount: "Un Plato principal y una bebida con 10 por ciento de descuento ",
-     img : "http://taqueriavillanueva2.com/wp-content/uploads/2021/01/mexican-drinks-portland-780x400.jpg"
+     img : "https://cdn.cheapism.com/images/Mexican-Dishes.2e16d0ba.fill-1440x605.jpg"
     })
     server.create('discount', {
       id: 5,
