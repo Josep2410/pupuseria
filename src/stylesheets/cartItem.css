@@ -63,3 +63,12 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+.centerItem{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px
+}
+
+

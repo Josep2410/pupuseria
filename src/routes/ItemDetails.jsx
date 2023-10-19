@@ -30,7 +30,7 @@ export default function ItemType(props){
   
 
   return(
-    <div className='container-sm'>
+    <div className='container-sm detailPage'>
      {
       myItem? ( 
         <div>

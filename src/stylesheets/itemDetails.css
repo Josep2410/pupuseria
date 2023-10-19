@@ -1,3 +1,7 @@
+.detailPage > *{
+  margin-top: 15px;
+}
+
 #backArrow{
   height: 25px;
   margin-bottom : 10px;

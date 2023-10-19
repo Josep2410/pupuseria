@@ -17,6 +17,7 @@ export default function MyCart(){
   fetch(`/api/cartItems`)
     .then(res=>res.json())
     .then(data => setCartItems(data.menus))
+    .catch(err=> console.log(err))
  }, [numOfItems])
 
  if(cartItems){
@@ -67,7 +68,7 @@ function decrementItemCount(id){
 
 
   return(
-  <div className='container-sm'>
+  <div className=' container-sm centerItem '>
     {numOfItems > 0? (
       <form action="">
         {displayItems}
@@ -84,7 +85,9 @@ function decrementItemCount(id){
         <br />
           <button className='btn btn-primary col-12'>Submit Order</button>
       </form>
-    ) : <h1>Your Cart is Empty</h1>}
+    ) : 
+          <h1 className='my-1'>Your Cart is Empty</h1>
+      }
   
   </div>)
 }
