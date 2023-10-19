@@ -2,7 +2,7 @@ import React from 'react'
 import '../stylesheets/TheSpecial.css'
 import { Link } from 'react-router-dom'
 
-export default function TheSpecial(props){
+export default function TheSpecial({children}){
 
   const d = new Date()
   const day = d.getDay()
@@ -13,6 +13,7 @@ export default function TheSpecial(props){
     fetch(`/api/discounts/${day}`)
       .then(res =>res.json())
       .then(data=> setState(data.discount))
+      .catch(err=> console.log(err))
   },[])
 
   function getLink(day){
@@ -27,10 +28,13 @@ export default function TheSpecial(props){
       default : return ""
     }
   }
+  console.log(state)
 
   return(
   <div>
-    {state && <section id="theSpecial" className="container-sm">
+    {state &&
+    <div>
+      <section id="theSpecial" className="container-sm">
      <h1>La Especial</h1>
      <Link to={`/${getLink(day)}`}>
       <div id="special_content">
@@ -38,7 +42,11 @@ export default function TheSpecial(props){
          <p id="special_paragraph">{state.discount}</p>
       </div>
      </Link>
-    </section>}
+    </section> 
+      {children}
+    </div>
+    
+     }
   </div>
     )
 }

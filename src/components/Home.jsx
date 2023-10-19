@@ -27,10 +27,11 @@ export default function Home(props){
   return( //conditionally render JSX
     <>{
       menu ?
-     ( <div>
-       <TheSpecial/>
-      {uniqueItems.map(str=> <FoodItems title={str} arr={getArray(str)} key={str}/>) }
-      </div>) : <h1>Loading...</h1>
+     ( 
+       <TheSpecial> 
+         {uniqueItems.map(str=> <FoodItems title={str} arr={getArray(str)} key={str}/>) }
+       </TheSpecial> 
+     ) : <h1>Loading...</h1>
     }
     </>
   
