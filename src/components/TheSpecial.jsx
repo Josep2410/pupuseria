@@ -33,7 +33,7 @@ export default function TheSpecial({children}){
   return(
   <div>
     {state &&
-    <div>
+    <div className='my-4'>
       <section id="theSpecial" className="container-sm">
      <h1>La Especial</h1>
      <Link to={`/${getLink(day)}`}>
