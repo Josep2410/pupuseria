@@ -178,8 +178,8 @@ createServer({
       category : 'Bebidas',
       inCart : false,
       numInCart : 0,
-      item : 'coffee',
-      price : 2.50,
+      item : 'cafe',
+      price : 2.25,
       img : 'https://media.cnn.com/api/v1/images/stellar/prod/150929101049-black-coffee-stock.jpg?q=x_3,y_1231,h_1684,w_2993,c_crop/h_540,w_960/f_webp'
     })
     server.create('menu', {
@@ -283,7 +283,6 @@ createServer({
   routes(){
     this.namespace = 'api'
     this.logging = false
-    this.timing = 500
 
     this.get('/menu', (schema, request)=>{
       return schema.menus.all()

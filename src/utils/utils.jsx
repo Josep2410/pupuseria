@@ -39,7 +39,7 @@ function getDiscount(day, cartItems, subTotal){
       break;
     }
     case 3:{
-      const coffee = cartItems.filter(item => item.item == 'coffee')
+      const coffee = cartItems.filter(item => item.item == 'cafe')
       const dessert = cartItems.filter(item => item.category == 'Pastel')
       if(coffee.length  && dessert.length) return formatNumber(subTotal * DISCOUNT_RATE)
       break;
@@ -81,7 +81,7 @@ function getTaxes(subTotal, discount = 0.00){
 }
 
 function getTotal(subtotal, discount = 0.00, tax){
-  return formatNumber((subtotal - discount)+ tax )
+  return (formatNumber((subtotal - discount)+ tax )).toFixed(2)
 }
 
 function getNumOfItems(arr){
