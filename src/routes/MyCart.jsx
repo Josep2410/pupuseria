@@ -70,7 +70,7 @@ function decrementItemCount(id){
   return(
   <div className=' container-sm '>
     {numOfItems > 0? (
-      <form action="" >
+      <form  >
         {displayItems}
         <div className='row d-flex justify-content-end'>
           <span className='clearCart standard col-4' onClick={clearItems}>clear cart</span>
