@@ -239,7 +239,8 @@ createServer({
     server.create('discount', {
       id: 0,
      dayOfWeek : 'Domingo',
-     discount: "2 o Mas platos de desayuno 15 por ciento de descuento" // a coffee and dessert 20% off
+     discount: "Dos o mas platos de desayuno 15 por ciento de descuento" ,
+     img : "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2018/04/best-huevos-rancheros-recipe-25.jpg?resize=650%2C975&ssl=1"
     })
     server.create('discount', {
      id: 1,

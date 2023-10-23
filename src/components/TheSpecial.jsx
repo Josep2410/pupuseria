@@ -28,7 +28,6 @@ export default function TheSpecial({children}){
       default : return ""
     }
   }
-  console.log(state)
 
   return(
   <div>
