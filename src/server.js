@@ -23,7 +23,7 @@ createServer({
       numInCart : 0,
       item : 'Huevos estrellados (fritos)',
       price : 6.99,
-      img: 'https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/169879196_115314267323885_6577124893782908424_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=zREasuVlmK0AX-zxBpy&_nc_oc=AQmXg_8sn3zbSgmU--AUApMzi4tRreUdUvXTfO66qRe5rrzGEK5JNYkuq2osbDaW0U6qNEjgHpKWb8mrR8AiyBRf&_nc_ht=scontent-hou1-1.xx&oh=00_AfCbdCY9074MY45fMocrDpck5vPZMPD0nWwrFSP9yqI-3A&oe=65395BE7'
+      img: 'https://content-cocina.lecturas.com/medio/2018/07/19/paso-a-paso-para-hacer-huevos-estrellados-con-jamon-resultado-final_52a23a35_800x800.jpg'
     })
     server.create('menu', {
       id: 3,
