@@ -5,9 +5,8 @@ import App from './routes/App.jsx'
 import './server.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
   )
   
-  /*   <React.StrictMode>
-      <App />
-    </React.StrictMode>, */

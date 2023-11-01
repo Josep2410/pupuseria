@@ -23,7 +23,7 @@ createServer({
       numInCart : 0,
       item : 'Huevos estrellados (fritos)',
       price : 6.99,
-      img: 'https://content-cocina.lecturas.com/medio/2018/07/19/paso-a-paso-para-hacer-huevos-estrellados-con-jamon-resultado-final_52a23a35_800x800.jpg'
+      img: 'https://cheforopeza.com.mx/wp-content/uploads/2017/11/huevos-estrellados-sobre-nopal-y-salsa-roja-recetas-chef-oropeza-jpg-940x450.jpg'
     })
     server.create('menu', {
       id: 3,
